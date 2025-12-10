@@ -163,13 +163,3 @@ document.getElementById("exportBtn").addEventListener("click", (e) => {
 
     document.body.removeChild(element);
 });
-
-// Add this new handler for Delete All button
-document.getElementById("deleteAllBtn").addEventListener("click", (e) => {
-    if (confirm("Are you sure you want to delete all bookmarks? This action cannot be undone.")) {
-        bookmarks = [];
-        chrome.storage.local.set({ bookmarks: [] }, () => {
-            renderList(bookmarks);
-        });
-    }
-});

@@ -158,8 +158,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
-    width: 15em; /* Increased from 10em to accommodate 3 buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    width: 10em;
 }
 
 .ieportBtn {
@@ -179,13 +178,4 @@ body {
 
 #jsonInput {
     display: none;
-}
-
-.deleteAllBtn {
-    background-color: #b74438 !important;
-    color: #fff !important;
-}
-
-.deleteAllBtn:hover {
-    background-color: #c30a0a !important;
 }
