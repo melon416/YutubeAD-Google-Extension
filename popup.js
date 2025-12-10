@@ -163,3 +163,28 @@ document.getElementById("exportBtn").addEventListener("click", (e) => {
 
     document.body.removeChild(element);
 });
+
+document.getElementById("deleteAllBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleDiv(document.getElementById("shareDiv"), false);
+    toggleDiv(document.getElementById("deleteDiv"), false);
+    let deleteAllDiv = document.getElementById("deleteAllDiv");
+    toggleDiv(deleteAllDiv, true);
+    
+    document.getElementById("cancelDeleteAllBtn").onclick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleDiv(deleteAllDiv, false);
+    };
+    
+    document.getElementById("confirmDeleteAllBtn").onclick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        bookmarks = [];
+        chrome.storage.local.set({ bookmarks: bookmarks }, () => {
+            toggleDiv(deleteAllDiv, false);
+            renderList(bookmarks);
+        });
+    };
+});

@@ -13,8 +13,13 @@
             <img id="settingsIcon" class="icon settingsIcon" src="icons/settings.png" />
         </div>
         <div id="ieportDiv" class="ieportDiv d-none">
-            <input type="button" id="importBtn" class="ieportBtn" value="Import" />
-            <input type="button" id="exportBtn" class="ieportBtn" value="Export" />
+            <div class="buttonRow">
+                <input type="button" id="importBtn" class="ieportBtn" value="Import" />
+                <input type="button" id="exportBtn" class="ieportBtn" value="Export" />
+            </div>
+            <div class="buttonRow">
+                <input type="button" id="deleteAllBtn" class="ieportBtn deleteAllBtn" value="Delete All" />
+            </div>
             <input id="jsonInput" type="file" />
         </div>
         <ul id="bookmarks"></ul>
@@ -30,6 +35,13 @@
             <div class="deleteBtns">
                 <a class="delBtn blue" id="cancelDelBtn">Cancel</a>
                 <a class="delBtn red" id="confirmDelBtn">Delete</a>
+            </div>
+        </div>
+        <div id="deleteAllDiv" class="shareDiv d-none">
+            <p id="deleteAllTitle">Delete All Bookmarks?</p>
+            <div class="deleteBtns">
+                <a class="delBtn blue" id="cancelDeleteAllBtn">Cancel</a>
+                <a class="delBtn red" id="confirmDeleteAllBtn">Delete All</a>
             </div>
         </div>
         <script src="popup.js"></script>
