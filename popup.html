@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube Ads Bookmarks</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="headerDiv">
+            <p class="logo">Youtube Ad Bookmarks</p>
+            <img id="settingsIcon" class="icon settingsIcon" src="icons/settings.png" />
+        </div>
+        <div id="ieportDiv" class="ieportDiv d-none">
+            <input type="button" id="importBtn" class="ieportBtn" value="Import" />
+            <input type="button" id="exportBtn" class="ieportBtn" value="Export" />
+            <input type="button" id="deleteAllBtn" class="ieportBtn deleteAllBtn" value="Delete All" />
+            <input id="jsonInput" type="file" />
+        </div>
+        <ul id="bookmarks"></ul>
+        <div id="shareDiv" class="shareDiv d-none">
+            <p id="shareTitle">Share On</p>
+            <div class="socialIcons">
+                <img id="fbShareIcon" class="socialIcon" src="icons/fb.png" />
+                <img id="twitShareIcon" class="socialIcon" src="icons/twitter.png" />
+            </div>
+        </div>
+        <div id="deleteDiv" class="shareDiv d-none">
+            <p id="deleteTitle">Delete</p>
+            <div class="deleteBtns">
+                <a class="delBtn blue" id="cancelDelBtn">Cancel</a>
+                <a class="delBtn red" id="confirmDelBtn">Delete</a>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

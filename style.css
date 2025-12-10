@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+body {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    background: #2f2e2e;
+    width: 25em;
+}
+
+.logo {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+#bookmarks {
+    list-style: none;
+    max-height: 35em;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.bookmark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    border: 0.12em solid #ff0000;
+    border-radius: 0.3em;
+    padding: 0 0.5em;
+    margin-bottom: 0.55em;
+}
+
+.bookmark:last-child {
+    margin-bottom: 0;
+}
+
+.socialIcon,
+.icon {
+    width: 1em;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.socialIcon:hover,
+.icon:hover {
+    -webkit-transform: scale(1.3) rotate(0.01deg);
+    transform: scale(1.3) rotate(0.01deg);
+}
+
+.bookmarkLink {
+    font-size: 1em;
+    color: #d8d0d0;
+    text-decoration: none;
+    text-align: center;
+    margin: 0.3em 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.bookmarkLink::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #d8d0d0ba;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out 0s;
+}
+
+.bookmarkLink:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+.bookmarkIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 2.75em;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.shareDiv,
+.deleteDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2b2828;
+    box-shadow: 0px 0px 3px 1px #211c1c;
+    border-radius: 0.5em;
+    margin-top: 1em;
+    padding: 0 1em;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 5em;
+}
+
+.socialIcon {
+    width: 2em;
+}
+
+.deleteBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 8.5em;
+}
+
+.delBtn {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.blue {
+    background: #146cb7;
+}
+
+.red {
+    background: #b74438;
+}
+
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px black;
+    border: solid 3px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px #c30a0a;
+    border-left: solid 3px transparent;
+    border-right: solid 3px transparent;
+}
+
+.headerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsIcon {
+    position: absolute;
+    right: 1em;
+    width: 1.5em;
+}
+
+.ieportDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    width: 15em; /* Increased from 10em to accommodate 3 buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+.ieportBtn {
+    border: none;
+    background-color: #327aab;
+    color: #000;
+    padding: 0.4em;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.ieportBtn:hover {
+    background-color: #3498db;
+}
+
+#jsonInput {
+    display: none;
+}
+
+.deleteAllBtn {
+    background-color: #b74438 !important;
+    color: #fff !important;
+}
+
+.deleteAllBtn:hover {
+    background-color: #c30a0a !important;
+}
